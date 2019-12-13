@@ -19,8 +19,8 @@ exports.write = ctx => {
   const { title, body } = ctx.request.body;
   postId += 1;
   const post = { id: postId, title, body };
-  post.push(post);
-  ctx.body = post;
+  posts.push(post);
+  ctx.body = posts;
 };
 
 /* 포스트 목록 조회
@@ -48,7 +48,7 @@ exports.read = ctx => {
     };
     return;
   }
-  ctx.body = post;
+  ctx.body = posts;
 };
 
 /* 특정 포스트 제거
