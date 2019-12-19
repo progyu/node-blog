@@ -7,7 +7,6 @@ import { check } from '../../modules/user';
 
 const LoginForm = ({ history }) => {
   const [error, setError] =useState(null);
-
   const dispatch = useDispatch();
   const { form, auth, authError, user } = useSelector(({ auth, user }) => ({
     form: auth.login,
